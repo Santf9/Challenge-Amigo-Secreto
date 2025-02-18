@@ -7,21 +7,32 @@ let arrayAmigos = []
 //Capturando el valor del campo de entrada del usuario
 let input = document.getElementById('amigo')
 
-let listaAmigosUl = document.getElementById('listaAmigos')
-
-//Validación del campo de entrada y actualización del arrayAmigos
+//Función y validación del campo de entrada y actualización del arrayAmigos
 function agregarAmigo() {
+
     if (!input.value) {
         alert("Porfavor, inserte un nombre")
+    } else if (arrayAmigos.includes(input.value)) {
+        alert(`El nombre ${input.value} ya se encuentra en la lista`)
+
     } else {
         arrayAmigos.push(input.value)
-        listaAmigosUl.innerHTML += `<li>${input.value}</li>` 
+        console.log(arrayAmigos)
     }
-    limpiarInput()
+    actualizarListaAmigos()
 }
 
-//Función para limpiar el campo de entrada una vez añadido los nombres
-function limpiarInput() {
-    document.querySelector('#amigo').value = '';
+//Funcion para actualizar lista de amigos
+function actualizarListaAmigos() {
+    let listaAmigos = document.getElementById('listaAmigos')
+    listaAmigos.innerHTML = ''
+
+    for (let i = 0; i < arrayAmigos.length; i++) {
+        const li = document.createElement('li')
+        li.textContent = arrayAmigos[i]
+        listaAmigos.appendChild(li)
+    }
 }
+
+//funcion para sortear amigo aleatorio
 
