@@ -17,4 +17,4 @@ Este es un proyecto simple en JavaScript que permite agregar nombres de amigos e
 - **JavaScript**: Lógica de la aplicación para agregar amigos, hacer el sorteo y mostrar los resultados.
 
 ## Demo
-Puedes probar el proyecto en el siguiente enlace: [Challenge-amigo-secreto]()
+Puedes probar el proyecto en el siguiente enlace: [Challenge-amigo-secreto](https://santf9.github.io/Challenge-Amigo-Secreto/)
